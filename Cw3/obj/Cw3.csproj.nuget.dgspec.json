@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Paulina\\Desktop\\PJWSTK\\Sem VI\\APBD\\APBD zadania\\Cw4\\Cw3\\Cw3.csproj": {}
+    "C:\\Users\\Paulina\\Desktop\\PJWSTK\\Sem VI\\APBD\\APBD zadania\\cw5\\Cw3\\Cw3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Paulina\\Desktop\\PJWSTK\\Sem VI\\APBD\\APBD zadania\\Cw4\\Cw3\\Cw3.csproj": {
+    "C:\\Users\\Paulina\\Desktop\\PJWSTK\\Sem VI\\APBD\\APBD zadania\\cw5\\Cw3\\Cw3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Paulina\\Desktop\\PJWSTK\\Sem VI\\APBD\\APBD zadania\\Cw4\\Cw3\\Cw3.csproj",
+        "projectUniqueName": "C:\\Users\\Paulina\\Desktop\\PJWSTK\\Sem VI\\APBD\\APBD zadania\\cw5\\Cw3\\Cw3.csproj",
         "projectName": "Cw3",
-        "projectPath": "C:\\Users\\Paulina\\Desktop\\PJWSTK\\Sem VI\\APBD\\APBD zadania\\Cw4\\Cw3\\Cw3.csproj",
+        "projectPath": "C:\\Users\\Paulina\\Desktop\\PJWSTK\\Sem VI\\APBD\\APBD zadania\\cw5\\Cw3\\Cw3.csproj",
         "packagesPath": "C:\\Users\\Paulina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Paulina\\Desktop\\PJWSTK\\Sem VI\\APBD\\APBD zadania\\Cw4\\Cw3\\obj\\",
+        "outputPath": "C:\\Users\\Paulina\\Desktop\\PJWSTK\\Sem VI\\APBD\\APBD zadania\\cw5\\Cw3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,9 +41,13 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.10.1, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

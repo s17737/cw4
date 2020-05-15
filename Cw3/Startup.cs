@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Cw3.Middlewares;
 using Cw3.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,7 +27,7 @@ namespace Cw3
         public void ConfigureServices(IServiceCollection services)
         {
             //AddSingleton, AddTransient, AddScoped
-            services.AddScoped<IStudentsDal, SqlServerDbDal>();
+            services.AddScoped<IStudentsDbService, SqlServerDbService>();
             services.AddControllers();
         }
 
@@ -42,6 +42,23 @@ namespace Cw3
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<LoggingMiddleware>();
+
+            app.Use(async (context, next) =>
+            {
+                if (!context.Request.Headers.ContainsKey("Index"))
+                {
+                    context.Response.StatusCode = 401;
+                    
+                    return;
+                }
+
+                string index = context.Request.Headers["Index"].ToString();
+                //spr w bazie
+
+                await next();
+            });
 
             app.UseEndpoints(endpoints =>
             {
